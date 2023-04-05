@@ -5,9 +5,11 @@ import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'login',pathMatch:"full"},
   {path:'login', component:LoginComponent},
   {path:'home',component:HomeComponent},
-  {path:'movie',component:MovieComponent}
+  {path:'movie',component:MovieComponent},
+  {path:"**",component:LoginComponent}
 ];
 
 @NgModule({
