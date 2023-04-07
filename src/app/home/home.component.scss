@@ -1,74 +1,126 @@
 ::-webkit-scrollbar {
     display: none;
 }
-.home-container{
+
+.home-container {
     display: flex;
-    .all-movies{
+    
+
+    .all-movies {
         width: 75%;
+        height: 100vh;
         min-height: calc(100vh - 80px);
         border-right: 1px solid #fdc827;
         padding: 20px 40px;
-        font-family: "Roboto",sans-serif;
-        .top{
+        font-family: "Roboto", sans-serif;
+        float: left;
+
+        .top {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
-            h4{
+
+            h4 {
                 text-transform: uppercase;
                 font-weight: bold;
-                border-left: 5px solid #ff9900 ;
+                border-left: 5px solid #ff9900;
 
                 padding-left: 10px;
             }
-            .view-all{
-                color:#ff9900;
+
+            .view-all {
+                color: #ff9900;
                 cursor: pointer;
-                
+
             }
         }
-        .movies-thumbnail{
+
+        .movies-thumbnail {
             display: flex;
             justify-content: space-between;
             width: 100%;
             overflow: auto;
-            .movies{
-            .cover{
-                margin-right: 10px;
-                img{
-                    border-radius: 5px;
-                }
-            }
-            .details{
-                width: 180px;
-                .name{
-                    font-weight: bold;
-                    height: 50px;
-                    margin-top: 5px;
-                    cursor: pointer ;
-                }
-                .rating{
-                   width: 170px;
-                   padding-right: 45px;
-             
-                   position: relative;
 
-                 .rating-value{
-                    position: absolute;
-                   right:  0;
-                   font-weight: bold;
-                 }
-              
+            .movies {
+                .cover {
+                    margin-right: 10px;
+
+                    img {
+                        border-radius: 5px;
+                    }
                 }
-            }
+
+                .details {
+                    width: 180px;
+
+                    .name {
+                        font-weight: bold;
+                        height: 50px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+
+                    .rating {
+                        width: 170px;
+                        padding-right: 45px;
+
+                        position: relative;
+
+                        .rating-value {
+                            position: absolute;
+                            right: 0;
+                            font-weight: bold;
+                        }
+
+                    }
+                }
             }
         }
 
+        .theatre-movie {
+            margin-top: 20px;
+        }
+    
     }
-    .popular-movies{
+
+    .popular-movie {
         width: 25%;
         min-height: calc(100vh - 80px);
         padding: 20px 40px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto", sans-serif;
+        
+        h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+            border-left: 5px solid #ff9900;
+
+            padding-left: 10px;
+        }
+        .movies{
+           .details{
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content:space-between ;
+            .rating {
+          
+                padding-right: 45px;
+    
+                position: relative;
+    
+                .rating-value {
+                    position: absolute;
+                    right: 0;
+                    font-weight: bold;
+                }
+    
+            }
+            .name{
+                cursor: pointer;
+            }
+           } 
+          
+        }
     }
 }

@@ -8,7 +8,7 @@
             </div>
             <div class="movies-thumbnail">
                 <div class="movies" *ngFor="let movie of trendingMovies">
-                    <div class="cover">
+                    <div class="cover" (click)="gotoMovie('trending-movie',movie.id )">
                         <img [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
@@ -22,5 +22,47 @@
                 </div>
             </div>
         </div>
-        <div class="popular-movies"></div>
+        <div class="theatre-movie">
+            <div class="top">
+                <h4>Popular in theatre</h4>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumbnail">
+                <div class="movies" *ngFor="let movie of theatreMovies">
+                    <div class="cover" (click)="gotoMovie('theatre-movie',movie.id )">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name">{{movie.name}}</div>
+                        <div class="rating">
+                            <span class="rating-value">{{movie.rating}}</span>
+                            <app-star-rating [rating]="movie.rating"
+                                [isReadOnly]="true"></app-star-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+       
+    </div>
+    <div class="popular-movie">
+      
+            <h4>Popular movies of all time</h4>
+          
+       
+        <div class="movies-thumbnail">
+            <div class="movies" *ngFor="let movie of popularMovies">
+            
+                <div class="details">
+                    <div class="name" (click)="gotoMovie('popular-movie',movie.id )">{{movie.name}}</div>
+                    <div class="rating">
+                        <span class="rating-value">{{movie.rating}}</span>
+                        <app-star-rating [rating]="movie.rating"
+                            [isReadOnly]="true"></app-star-rating>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
